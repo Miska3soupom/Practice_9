@@ -1,0 +1,44 @@
+﻿<Window x:Class="Email.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Email"
+        mc:Ignorable="d"
+        Background="Aquamarine"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" WindowStartupLocation="CenterScreen"
+        Title="MainWindow" Height="450" Width="700">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Rectangle Grid.Row="1" Grid.RowSpan="6" Grid.Column="1" Grid.ColumnSpan="6" Fill="CadetBlue"/>
+        <TextBlock Grid.Row="1" Grid.RowSpan="2" Grid.Column="1"  Grid.ColumnSpan="6" Text="ВХОД" Foreground="#DAD7CD" HorizontalAlignment="Center" FontSize="24pt" VerticalAlignment="Center"  />
+        <TextBox x:Name="EmailTbx" Grid.Column="2" Grid.Row="3" Padding="5" Foreground="CadetBlue" Background="BlueViolet" FontSize="11.5pt" materialDesign:HintAssist.Hint="Эл. почта" Grid.ColumnSpan="3" Margin="0,10,0,10"  />
+        <ComboBox x:Name="ComboBx" materialDesign:HintAssist.Hint="Ящик" Padding="5" FontSize="10.5pt" Foreground="CadetBlue" Grid.Row="3" Grid.Column="5" Margin="5,0,0,0" Background="BlueViolet" BorderBrush="CadetBlue" >
+            <ComboBoxItem Content="Google" Tag="imap.gmail.com" />
+            <ComboBoxItem Content="Mail" Tag="imap.mail.ru" />
+            <ComboBoxItem Content="Yandex" Tag="imap.yandex.ru" />
+            <ComboBoxItem Content="Rambler" Tag="imap.rambler.ru" />
+        </ComboBox>
+        <PasswordBox x:Name="PasswordBx" Grid.Column="2" Grid.Row="4" Grid.ColumnSpan="4" materialDesign:HintAssist.Hint="Пароль" Foreground="AntiqueWhite" Background="BlueViolet" FontSize="11.5pt" Padding="5" Margin="0,10,0,10" />
+        <Button x:Name="Enter" Grid.Row="5" Grid.RowSpan="2" Content="Войти" Foreground="#DAD7CD" FontSize="13pt" Grid.Column="3" Grid.ColumnSpan="2" VerticalAlignment="Center" BorderBrush="BlueViolet" Background="BlueViolet" Cursor="Hand" Click="Enter_Click" />
+    </Grid>
+</Window>
